@@ -1,6 +1,6 @@
 import numpy as np
 
-class Neuron:
+class ErrorNeuron:
     def __init__(self, num_inputs):
         self.weights = np.random.rand(num_inputs)
         self.bias = np.random.rand()
@@ -21,7 +21,7 @@ class Neuron:
 X_train = np.array([[0, 0, 1], [1, 1, 1], [1, 0, 1], [0, 1, 1]])
 y_train = np.array([0, 1, 1, 0])
 
-neuron = Neuron(num_inputs=3)
+neuron = ErrorNeuron(num_inputs=3)
 
 # Train the neuron for 10,000 iterations
 for _ in range(10000):
